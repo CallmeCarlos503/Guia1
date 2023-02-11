@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">CalculadoraPolacaInversaApp</string>
+    <string-array name="spOpciones">
+        <item>
+            +
+        </item>
+        <item>
+            -
+        </item>
+        <item>
+            *
+        </item>
+        <item>
+            /
+        </item>
+    </string-array>
+</resources>

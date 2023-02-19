@@ -12,6 +12,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.os.Bundle;
 
+import java.text.DecimalFormat;
+
 
 public class MainActivity extends AppCompatActivity {
    EditText n1,n2;
@@ -36,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
             Double division1= Double.parseDouble(n1.getText().toString());
             Double division2= Double.parseDouble(n2.getText().toString());
             String opciones= SP_Signo.getSelectedItem().toString();
+            DecimalFormat formato1 = new DecimalFormat("#.00");
+
             switch (opciones){
                 case"+":
                     Result.setText("resultado de la suma: "+(N1+N2));
@@ -47,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                     Result.setText("resultado de la multiplicacion: "+(N1*N2));
                     break;
                 case "/":
-                    Result.setText("resultado de la division: "+(division1/division2));
+                    Result.setText("resultado de la division: "+formato1.format(division1/division2));
                     break;
                 default:
                     Result.setText("no deberias de llegar a esta opcion");
